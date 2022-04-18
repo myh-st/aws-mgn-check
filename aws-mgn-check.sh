@@ -52,7 +52,7 @@ if [[ $SET_KERNELH_VERSION -gt 0 ]]; then
 else
 	echo 'kernel-headers "VERSION NOT MATCH "'
 fi  
-# echo ""
+echo ""
 # echo "For everything to work, you need to install a kernel headers package "
 # echo "with the exact same version number of the running kernel."
 # echo "To install the correct kernel-devel/linux-headers, run the following command:"
