@@ -2,7 +2,7 @@
 echo ""
 echo "--------------------------------------------------------------------------"
 echo "## STEP 1 : Check tools are required for agent ##"
-echo "Check Python Version"
+echo "Require Python 2 (2.4 or above) or Python 3 (3.0 or above)."
 echo "--------------------------------------------------------------------------"
 which python
 status=$?
