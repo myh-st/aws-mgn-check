@@ -6,7 +6,7 @@ echo "Require Python 2 (2.4 or above) or Python 3 (3.0 or above)."
 echo "--------------------------------------------------------------------------"
 which python
 status=$?
-[ $status -eq 0 ] && echo -e "python : present" && python --version || echo -e "python : not present\n"
+[ $status -eq 0 ] && echo -e "python : present" && python --version || echo -e "python : not present"
 echo ""
 echo "--------------------------------------------------------------------------"
 echo "## STEP 2 : Check tools are required for agent ##"
