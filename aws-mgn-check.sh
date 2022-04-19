@@ -70,11 +70,11 @@ echo ""
 # echo ""
 echo "--------------------------------------------------------------------------"
 echo "## STEP 4 : Check disk space ##"
-echo -e "\nVerify that you have at least 2 GB of free disk space on the root directory"
-echo -e "\nVerify that you have at least 500 MB of free disk space on the /tmp directory"
+echo -e "Verify that you have at least 2 GB of free disk space on the root directory"
+echo -e "Verify that you have at least 500 MB of free disk space on the /tmp directory"
 echo "--------------------------------------------------------------------------"
 ROOT_AVAIL=$(df -h / | tail -1 | awk '{print $4}')
-echo -e "Free disk space on the root (/) : $ROOT_AVAIL" ; 
+echo -e "\nFree disk space on the root (/) : $ROOT_AVAIL" ; 
 TMP_AVAIL=$(df -h /tmp | tail -1 | awk '{print $4}')
 echo -e "Free disk space on the /tmp : $TMP_AVAIL"
 echo ""
