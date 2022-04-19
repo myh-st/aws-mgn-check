@@ -36,7 +36,7 @@ echo -e "Verify that you have kernel-devel/linux-headers installed that are exac
 the same version as the kernel you are running.\n"
 echo "--------------------------------------------------------------------------"
 CHECK_KERNEL=$(uname -r)
-echo -e "Current linux kernel version: $CHECK_KERNEL\n"
+echo -e "Kernel you are running version: $CHECK_KERNEL\n"
 SET_KERNEL_VERSION=$(rpm -qa | grep kernel-$CHECK_KERNEL | wc -l)
 SET_KERNELD_VERSION=$(rpm -qa | grep kernel-devel-$CHECK_KERNEL | wc -l)
 SET_KERNELH_VERSION=$(rpm -qa | grep kernel-headers-$CHECK_KERNEL | wc -l)
