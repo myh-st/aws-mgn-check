@@ -33,8 +33,9 @@ status=$?
 echo "--------------------------------------------------------------------------"
 echo "## STEP 3 : Check kernel verion ##"
 echo -e "Verify that you have kernel-devel/linux-headers installed that are exactly 
-the same version as the kernel you are running.\n"
+the same version as the kernel you are running."
 echo "--------------------------------------------------------------------------"
+echo ""
 CHECK_KERNEL=$(uname -r)
 echo -e "Kernel you are running version: $CHECK_KERNEL\n"
 SET_KERNEL_VERSION=$(rpm -qa | grep kernel-$CHECK_KERNEL | wc -l)
