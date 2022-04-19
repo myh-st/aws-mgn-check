@@ -1,13 +1,14 @@
 #!/bin/bash
 echo ""
+echo "--------------------------------------------------------------------------"
 echo "## STEP 1 : Check tools are required for agent ##"
 echo "Check Python Version"
+echo "--------------------------------------------------------------------------"
 which python
 status=$?
 [ $status -eq 0 ] && echo -e "python : present" && python --version || echo -e "python : not present\n"
 echo ""
 echo "--------------------------------------------------------------------------"
-echo ""
 echo "## STEP 2 : Check tools are required for agent ##"
 echo "The following tools are required for agent installation only"
 echo "--------------------------------------------------------------------------"
@@ -30,9 +31,7 @@ which rpm
 status=$?
 [ $status -eq 0 ] && echo -e "rpm : present\n" || echo -e "rpm : not present\n"
 echo "--------------------------------------------------------------------------"
-
 echo "## STEP 3 : Check kernel verion ##"
-echo ""
 echo -e "Verify that you have kernel-devel/linux-headers installed that are exactly 
 the same version as the kernel you are running.\n"
 echo "--------------------------------------------------------------------------"
