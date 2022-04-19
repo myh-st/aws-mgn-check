@@ -1,6 +1,14 @@
 #!/bin/bash
 echo ""
 echo "## STEP 1 : Check tools are required for agent ##"
+echo "Check Python Version"
+which python
+status=$?
+[ $status -eq 0 ] && echo -e "python : present" && python --version || echo -e "python : not present\n"
+echo ""
+echo "--------------------------------------------------------------------------"
+echo ""
+echo "## STEP 2 : Check tools are required for agent ##"
 echo "The following tools are required for agent installation only"
 echo "--------------------------------------------------------------------------"
 which make
@@ -23,7 +31,7 @@ status=$?
 [ $status -eq 0 ] && echo -e "rpm : present\n" || echo -e "rpm : not present\n"
 echo "--------------------------------------------------------------------------"
 
-echo "## STEP 2 : Check kernel verion ##"
+echo "## STEP 3 : Check kernel verion ##"
 echo ""
 echo -e "Verify that you have kernel-devel/linux-headers installed that are exactly 
 the same version as the kernel you are running.\n"
@@ -62,7 +70,7 @@ echo ""
 # echo "sudo apt-get install linux-headers-`uname -r`"
 # echo ""
 echo "--------------------------------------------------------------------------"
-echo "## STEP 3 : Check disk space ##"
+echo "## STEP 4 : Check disk space ##"
 echo -e "\nVerify that you have at least 2 GB of free disk space on the root directory"
 echo -e "\nVerify that you have at least 500 MB of free disk space on the /tmp directory"
 echo "--------------------------------------------------------------------------"
@@ -72,8 +80,8 @@ TMP_AVAIL=$(df -h /tmp | tail -1 | awk '{print $4}')
 echo -e "Free disk space on the /tmp : $TMP_AVAIL"
 echo ""
 echo "--------------------------------------------------------------------------"
-echo "## STEP 4 : verify kernel symbolic link ##"
-echo "verify that the folder that contains the kernel-devel/linux-headers is not a symbolic link"
+echo "## STEP 5 : verify kernel symbolic link ##"
+echo "Verify that the folder that contains the kernel-devel/linux-headers is not a symbolic link"
 echo "--------------------------------------------------------------------------"
 ls -l /usr/src/kernels
 echo ""
